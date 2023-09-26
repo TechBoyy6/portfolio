@@ -4,6 +4,6 @@ export default class RickTriggerPrompts {
     projectsIcon: "user clicked on projects menu option",
     timelineIcon: "user clicked on timeline menu option",
     contactIcon: "user clicked on contact menu option",
-    themeChangeButton: "user clicked on theme change button",
+    themeChangeButton: "user clicked on change theme button",
   };
 }

@@ -8,12 +8,15 @@ import Contact from "./pages/contact";
 import NotFound from "./pages/not_found";
 import Rick from "./components/rick";
 import RickMessageState from "./context/rick/rickMessageState";
+import { useMediaQuery } from "react-responsive";
+import Navbar from "./components/tabs";
 
 function App() {
+  const isTabletOrMobile = useMediaQuery({ query: "(max-width: 1224px)" });
   return (
     <RickMessageState>
       <BrowserRouter>
-        <Sidebar />
+        {isTabletOrMobile ? <Navbar /> : <Sidebar />}
         <Routes>
           <Route path="/" element={<About />} errorElement={<NotFound />} />
           <Route
@@ -32,7 +35,7 @@ function App() {
             errorElement={<NotFound />}
           />
         </Routes>
-        <Rick />
+        {isTabletOrMobile ? null : <Rick />}
       </BrowserRouter>
     </RickMessageState>
   );

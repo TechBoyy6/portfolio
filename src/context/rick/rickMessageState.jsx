@@ -5,7 +5,7 @@ import PropTypes from "prop-types";
 
 const RickMessageState = (props) => {
   const { Asset, Rick } = ConstantsStrings;
-  const [rickMessage, setRickMessage] = useState("Hello there !");
+  const [rickMessage, setRickMessage] = useState(Rick.initialMsg);
   const [rickImage, setRickImage] = useState(Asset.rick);
   const [rickMessageChanged, setRickMessageChanged] = useState(false);
   //   const rickData = {
