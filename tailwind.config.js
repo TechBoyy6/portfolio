@@ -11,7 +11,10 @@ export default {
       boxShadow: {
         '3xl': '0 3px 50px -10px rgba(0, 0, 0, 0.3)',
         '1xl': '0 1px 20px 1px rgba(0, 0, 0, 0.3)',
-      }
+      },
+      colors: {
+        'personality_color': "#da9c14"
+      },
     },
   },
   plugins: [daisyui],

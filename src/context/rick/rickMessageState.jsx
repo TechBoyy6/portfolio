@@ -4,9 +4,9 @@ import { useState } from "react";
 import PropTypes from "prop-types";
 
 const RickMessageState = (props) => {
-  const { Asset, Rick } = ConstantsStrings;
+  const { Rick } = ConstantsStrings;
   const [rickMessage, setRickMessage] = useState(Rick.initialMsg);
-  const [rickImage, setRickImage] = useState(Asset.rick);
+  const [rickImage, setRickImage] = useState(Rick.rickPosePath);
   const [rickMessageChanged, setRickMessageChanged] = useState(false);
   //   const rickData = {
   //     message: rickMessage,

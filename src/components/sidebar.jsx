@@ -14,7 +14,7 @@ import { useEffect, useContext } from "react";
 import RickMessageContext from "../context/rick/rickMessageContext";
 
 export default function Sidebar() {
-  const { Navbar, Asset } = ConstantsStrings;
+  const { Navbar, Rick } = ConstantsStrings;
   const { Sidebar } = RickTriggerPrompts;
   const RickMessageProvider = useContext(RickMessageContext);
 
@@ -26,7 +26,9 @@ export default function Sidebar() {
       element.addEventListener("click", () => {
         RickMessageProvider.getCommentOnUserAction(
           promptsKeys[i],
-          i + 1 === sidebarNavButton.length ? Asset.rick_pout : Asset.rick
+          i + 1 === sidebarNavButton.length
+            ? Rick.rickPoutPosePath
+            : Rick.rickPosePath
         );
       });
     }
